@@ -16,5 +16,8 @@ El primer paso es ir a Compute Engine -> Instancias -> Crear instancia donde pod
 
 Una vez realizado ese paso, creamos un nuevo usuario y contraseña para las máquinas, de forma que tengan un acceso ssh securizado. Por defecto, google cloud utiliza una clave pública que puede mejorar la seguridad del ssh. En este proyecto se ha deshabilitado (aunque sea contradictorio) como se puede ver en la imagen porque si no se hiciera sería complicado acceder a las máquinas virtuales en la revisión del entregable. 
 
+![Opción de llave pública deshabilitada](/images/Cambio-clave-publica.jpeg)
+
 El siguiente requisito es una url con un dominio donde poder acceder a un Wordpress instalado por defecto. Como se ha mencionado en el entregable, se ha incluido en el archivo hosts el nombre para poder acceder. 
+
 
