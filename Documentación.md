@@ -26,6 +26,10 @@ Por defecto, google cloud utiliza una clave pública que puede mejorar la seguri
 
 ![Opción de llave pública deshabilitada](/images/Cambio-clave-publica.jpeg)
 
+Además, no era suficiente con deshabilitar esa opción, sino que además hacía falta reiniciar el servicio de ssh para que se actualizaran los datos y fuera posible la conexión. En la siguiente imagen se ve como al principio no permite acceder por fallo de llave pública y tras reiniciar el servicio sí lo permite.
+
+![Antes y después del reinicio](/images/antes-despues-reinicio.jpeg)
+
 El siguiente requisito es una url con un dominio donde poder acceder a un Wordpress instalado por defecto. Como se ha mencionado en el entregable, se ha incluido en el archivo hosts el nombre para poder acceder. Después, se comprueba que funciona con el comando curl, que devuelve todo el contenido de la página.
 
 ![Inserción de la URL y comprobación](/images/url-hosts.jpeg)
