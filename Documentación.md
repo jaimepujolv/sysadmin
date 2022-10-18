@@ -26,7 +26,7 @@ Por defecto, google cloud utiliza una clave pública que puede mejorar la seguri
 
 ![Opción de llave pública deshabilitada](/images/Cambio-clave-publica.jpeg)
 
-Además, no era suficiente con deshabilitar esa opción, sino que además hacía falta reiniciar el servicio de ssh para que se actualizaran los datos y fuera posible la conexión. En la siguiente imagen se ve como al principio no permite acceder por fallo de llave pública y tras reiniciar el servicio sí lo permite.
+Además, no era suficiente con deshabilitar esa opción, sino que además hacía falta reiniciar el servicio de ssh para que se actualizaran los datos y fuera posible la conexión (con "sudo systemctl restart sshd.service"). En la siguiente imagen se ve como al principio no permite acceder por fallo de llave pública y tras reiniciar el servicio sí lo permite.
 
 ![Antes y después del reinicio](/images/antes-despues-reinicio.jpeg)
 
