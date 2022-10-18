@@ -12,12 +12,16 @@ En los requisitos se recomienda utilizar Google Cloud o AWS y, dado que es la pr
 
 Una vez he accedido a Google Cloud y he creado un proyecto para el entregable, me dispongo a crear las MV. La primera que realizaré es el balanceador.
 
-El primer paso es ir a Compute Engine -> Instancias -> Crear instancia donde podremos poner las características que debe tener para el correcto funcionamiento. A destacar, se habilita el tráfico http y https, se pone la red default que utilizaré en ambas MV para que puedan comunicarse entre ellas, se habilita la opción de reenvío de IP para poder recibir y mandar las peticiones de la aplicación y se habilitan los atributos de invitado para realizar una conexión ssh segura. Esta sería la configuración básica de las dos máquinas virtuales.
+El primer paso es ir a Compute Engine -> Instancias -> Crear instancia donde podremos poner las características que debe tener para el correcto funcionamiento. A destacar, se habilita el tráfico http y https, se pone la red default que utilizaré en ambas MV para que puedan comunicarse entre ellas y se habilita la opción de reenvío de IP para poder recibir y mandar las peticiones de la aplicación (esto solo en la máquina balancer). Esta sería la configuración básica de las dos máquinas virtuales.
 
-Una vez realizado ese paso, creamos un nuevo usuario y contraseña para las máquinas, de forma que tengan un acceso ssh securizado. Por defecto, google cloud utiliza una clave pública que puede mejorar la seguridad del ssh. En este proyecto se ha deshabilitado (aunque sea contradictorio) como se puede ver en la imagen porque si no se hiciera sería complicado acceder a las máquinas virtuales en la revisión del entregable. 
+Una vez realizado ese paso, creamos un nuevo usuario y contraseña para las máquinas, de forma que tengan un acceso ssh securizado. 
+
+![Crear usuario](/images/crear-usuario.jpeg)
+
+Por defecto, google cloud utiliza una clave pública que puede mejorar la seguridad del ssh. En este proyecto se ha deshabilitado (aunque sea contradictorio) como se puede ver en la imagen porque si no se hiciera sería complicado acceder a las máquinas virtuales en la revisión del entregable. 
 
 ![Opción de llave pública deshabilitada](/images/Cambio-clave-publica.jpeg)
 
-El siguiente requisito es una url con un dominio donde poder acceder a un Wordpress instalado por defecto. Como se ha mencionado en el entregable, se ha incluido en el archivo hosts el nombre para poder acceder. 
+El siguiente requisito es una url con un dominio donde poder acceder a un Wordpress instalado por defecto. Como se ha mencionado en el entregable, se ha incluido en el archivo hosts el nombre para poder acceder. Después, se comprueba que funciona con el comando curl, que devuelve todo el contenido de la página.
 
-
+![Opción de llave pública deshabilitada](/images/url-hosts.jpeg)
